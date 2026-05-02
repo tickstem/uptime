@@ -35,13 +35,14 @@ type Monitor struct {
 
 // MonitorCheck is the result of a single HTTP check against a monitor's URL.
 type MonitorCheck struct {
-	ID         string      `json:"id"`
-	MonitorID  string      `json:"monitor_id"`
-	Status     CheckStatus `json:"status"`
-	StatusCode *int        `json:"status_code,omitempty"`
-	DurationMs int64       `json:"duration_ms"`
-	Error      string      `json:"error,omitempty"`
-	CheckedAt  time.Time   `json:"checked_at"`
+	ID           string      `json:"id"`
+	MonitorID    string      `json:"monitor_id"`
+	Status       CheckStatus `json:"status"`
+	StatusCode   *int        `json:"status_code,omitempty"`
+	DurationMs   int64       `json:"duration_ms"`
+	Error        string      `json:"error,omitempty"`
+	SSLExpiresAt *time.Time  `json:"ssl_expires_at,omitempty"`
+	CheckedAt    time.Time   `json:"checked_at"`
 }
 
 // CreateParams are the parameters for creating a new monitor.
