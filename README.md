@@ -106,8 +106,8 @@ err = client.Update(ctx, monitorID, uptime.UpdateParams{
 })
 
 // Pause / resume
-err = client.Pause(ctx, monitorID)
-err = client.Resume(ctx, monitorID)
+_, err = client.Pause(ctx, monitorID)
+_, err = client.Resume(ctx, monitorID)
 
 // Delete
 err = client.Delete(ctx, monitorID)
